@@ -146,11 +146,11 @@ img {
   align-items: center;
 }
 
-.contacts-cont {
+/* .contacts-cont {
   display: flex;
   float: left;
   color: #757575;
-}
+} */
 
 /* Studio */
 .studio-link {
@@ -194,19 +194,24 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   margin-right: 50px;
-  /* order: 2; */
 }
 
 .contacts-icon {
   fill: #757575;
+  margin-right: 10px;
 }
 
-.contact-item:hover svg,
+.contacts-icon::before,
+:focus {
+  fill: var(--accent-color);
+}
+
+/* .contact-item:hover svg,
 .contact-item:hover a {
   color: var(--accent-color);
-  fill: #2196f3;
-}
-.contact-item:focus,
+  fill: #2196f3; */
+
+.contact-item:focus svg,
 .contact-item:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
@@ -217,16 +222,26 @@ img {
   color: #2196f3;
 }
 .contacts-icon:hover {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contacts-icon:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
+
+/* .contacts-icon:focus {
+  fill: #2196f3;
+} */
 
 .email-link:hover,
 .email-link:focus {
   color: var(--accent-color);
+}
+
+.email-link:focus a,
+.email-link:focus svg {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .tel-link {
@@ -239,9 +254,19 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-right: 10px;
+}
+
+.tel-link:focus a,
+.tel-link:focus svg {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .contact-item {
   display: flex;
+}
+.contact-item:focus svg {
+  fill: var(--accent-color);
 }
 
 .tel-link:hover,
@@ -656,6 +681,16 @@ img {
   background-position: center;
   background-color: var(--header-bg-color);
 }
+
+.regular-customers-item:hover a,
+.regular-customers-item:hover svg {
+  fill: #2196f3;
+}
+
+.regular-customers-item:focus a,
+.regular-customers-item:focus svg {
+  fill: #2196f3;
+}
 .customers-button {
   display: flex;
   justify-content: center;
@@ -666,6 +701,11 @@ img {
   padding: 0;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+.customers-button:focus a,
+.customers-button:focus svg {
+  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 .button-icon {
   fill: #afb1b8;
@@ -680,7 +720,8 @@ img {
   border: 1px solid #2196f3;
   border-radius: 4px;
 }
-.button-icon:hover {
+.button-icon:hover,
+.button-icon:focus {
   fill: #2196f3;
 }
 
